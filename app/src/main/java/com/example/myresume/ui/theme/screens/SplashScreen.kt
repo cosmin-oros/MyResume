@@ -46,5 +46,6 @@ fun SplashScreen(navController: NavHostController){
             contentDescription = "Logo",
             modifier = Modifier.scale(10*scale.value)
         )*/
+        //change the image here
     }
 }

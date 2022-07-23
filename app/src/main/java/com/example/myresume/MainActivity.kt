@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.example.myresume.navigation.BottomNavItem
 import com.example.myresume.navigation.BottomNavigationBar
+import com.example.myresume.navigation.Navigation
 import com.example.myresume.ui.theme.MyResumeTheme
 
 class MainActivity : ComponentActivity() {
@@ -51,7 +52,7 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                 ) {
-                    /*Navigation(navController = navController)*/
+                    Navigation(navController = navController)
                 }
             }
         }
