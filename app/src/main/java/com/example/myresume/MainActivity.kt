@@ -4,19 +4,19 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.example.myresume.navigation.BottomNavItem
+import com.example.myresume.navigation.BottomNavigationBar
 import com.example.myresume.ui.theme.MyResumeTheme
 
 class MainActivity : ComponentActivity() {
+    @OptIn(ExperimentalMaterialApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -30,17 +30,17 @@ class MainActivity : ComponentActivity() {
                                 BottomNavItem(
                                     name = "About",
                                     route = "about",
-                                    icon = Icons.Filled
+                                    icon = Icons.Filled.Person
                                 ),
                                 BottomNavItem(
                                     name = "Technologies",
                                     route = "technologies",
-                                    icon = Icons.Filled
+                                    icon = Icons.Filled.Settings
                                 ),
                                 BottomNavItem(
                                     name = "Projects",
                                     route = "projects",
-                                    icon = Icons.Filled
+                                    icon = Icons.Filled.Work
                                 ),
                             ),
                             navController = navController,
