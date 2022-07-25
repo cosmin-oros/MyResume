@@ -16,15 +16,21 @@ fun Screen.TechnologiesScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ){
-        Text(text = "Programming Languages")
+        Text(text = "Programming Languages and Frameworks")
+
+        // here insert photos of the programming languages
 
         Spacer(modifier = Modifier.size(16.dp))
 
         Text(text = "Databases")
 
+        // here insert photos of the databases used
+
         Spacer(modifier = Modifier.size(16.dp))
 
         Text(text = "Tools")
+
+        // here insert version control, ides, editors etc
 
         Spacer(modifier = Modifier.size(16.dp))
     }
