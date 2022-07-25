@@ -1,5 +1,6 @@
 package com.example.myresume.ui.theme.screens
 
+import android.provider.ContactsContract
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -16,11 +17,12 @@ fun Screen.TechnologiesScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ){
-        Text(text = "Programming Languages and Frameworks")
+        Text(text = "Programming Languages (Sorted by how much I've worked in them)")
 
         Column() {
             // here insert photos of the programming languages
             //sort them by how much I've used them and their use case
+
 
         }
 
