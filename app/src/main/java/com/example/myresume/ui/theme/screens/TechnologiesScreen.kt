@@ -18,20 +18,25 @@ fun Screen.TechnologiesScreen(navController: NavController) {
     ){
         Text(text = "Programming Languages and Frameworks")
 
-        // here insert photos of the programming languages
+        Row() {
+            // here insert photos of the programming languages
+        }
 
         Spacer(modifier = Modifier.size(16.dp))
 
         Text(text = "Databases")
 
-        // here insert photos of the databases used
+        Row() {
+            // here insert photos of the databases used
+        }
 
         Spacer(modifier = Modifier.size(16.dp))
 
         Text(text = "Tools")
 
-        // here insert version control, ides, editors etc
+        Row() {
+            // here insert version control, ides, editors etc
+        }
 
-        Spacer(modifier = Modifier.size(16.dp))
     }
 }
