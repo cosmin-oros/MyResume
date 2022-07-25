@@ -6,8 +6,11 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.myresume.ImageCard
 import com.example.myresume.navigation.Screen
 
 @Composable
@@ -23,6 +26,11 @@ fun Screen.TechnologiesScreen(navController: NavController) {
             // here insert photos of the programming languages
             //sort them by how much I've used them and their use case
 
+            /*ImageCard(
+                painter = painterResource(id = ),
+                contentDescription = description,
+                title = title
+            )*/
 
         }
 
