@@ -23,27 +23,33 @@ fun PhotoListItem(photoData: PhotoData) {
     //when the photoData is the first tool put the Text Tools
     //display the name of the database and the type as text
 
-    Card(
-        modifier = Modifier
-            .padding(horizontal = 8.dp, vertical = 8.dp)
-            .fillMaxWidth(),
-        elevation = 2.dp,
-        backgroundColor = Color.DarkGray,
-        shape = RoundedCornerShape(corner = CornerSize(16.dp))
-    ) {
-        Row {
-            LanguageImage(photoData = photoData)
-            
-            Column(
-                modifier = Modifier
-                    .padding(16.dp)
-                    .fillMaxWidth()
-                    .align(Alignment.CenterVertically)
-            ) {
-                Text(text = photoData.title, style = typography.h6)
-                Text(text = photoData.text, style = typography.caption)
+    if (photoData.type == 0) {
+        Card(
+            modifier = Modifier
+                .padding(horizontal = 8.dp, vertical = 8.dp)
+                .fillMaxWidth(),
+            elevation = 2.dp,
+            backgroundColor = Color.DarkGray,
+            shape = RoundedCornerShape(corner = CornerSize(16.dp))
+        ) {
+            Row {
+                LanguageImage(photoData = photoData)
+
+                Column(
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .fillMaxWidth()
+                        .align(Alignment.CenterVertically)
+                ) {
+                    Text(text = photoData.title, style = typography.h6)
+                    Text(text = photoData.text, style = typography.caption)
+                }
             }
         }
+    }else if (photoData.type == 1){
+
+    }else {
+
     }
 
 }
