@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.provider.ContactsContract
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -25,7 +26,35 @@ fun TechnologiesScreen(navController: NavController) {
     var counter = 0
     var photo = mutableStateOf(getPhoto(photosList, counter))
 
+    LazyColumn(
+        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
+    ){
 
+    }
+
+    Spacer(modifier = Modifier.height(32.dp))
+
+    Row(
+        modifier = Modifier
+            .padding(16.dp)
+            .fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Start
+    ) {
+
+    }
+
+    Spacer(modifier = Modifier.height(32.dp))
+
+    Row(
+        modifier = Modifier
+            .padding(16.dp)
+            .fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Start
+    ) {
+
+    }
 }
 
 fun getPhoto(photosList: List<PhotoData>, counter: Int): PhotoData{
