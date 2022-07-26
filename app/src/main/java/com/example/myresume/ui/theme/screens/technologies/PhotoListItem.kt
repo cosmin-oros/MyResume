@@ -18,6 +18,11 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun PhotoListItem(photoData: PhotoData) {
+    //if type is 0 do all that, when the photoData is kotlin put a Text Programming Languages
+    //when the photoData is the first database put Text Databases
+    //when the photoData is the first tool put the Text Tools
+    //display the name of the database and the type as text
+
     Card(
         modifier = Modifier
             .padding(horizontal = 8.dp, vertical = 8.dp)
@@ -40,6 +45,7 @@ fun PhotoListItem(photoData: PhotoData) {
             }
         }
     }
+
 }
 
 @Composable

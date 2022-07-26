@@ -40,29 +40,7 @@ fun TechnologiesScreen(navController: NavController) {
             }
         )
     }
-    Spacer(modifier = Modifier.height(32.dp))
 
-    Row(
-        modifier = Modifier
-            .padding(16.dp)
-            .fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Start
-    ) {
-        //databases
-    }
-
-    Spacer(modifier = Modifier.height(32.dp))
-
-    Row(
-        modifier = Modifier
-            .padding(16.dp)
-            .fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Start
-    ) {
-        //tools
-    }
 
 
 }
