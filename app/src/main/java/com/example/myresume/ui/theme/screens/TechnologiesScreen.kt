@@ -40,7 +40,6 @@ fun TechnologiesScreen(navController: NavController) {
             }
         )
     }
-
     Spacer(modifier = Modifier.height(32.dp))
 
     Row(
@@ -50,7 +49,7 @@ fun TechnologiesScreen(navController: NavController) {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Start
     ) {
-
+        //databases
     }
 
     Spacer(modifier = Modifier.height(32.dp))
@@ -62,8 +61,10 @@ fun TechnologiesScreen(navController: NavController) {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Start
     ) {
-
+        //tools
     }
+
+
 }
 
 fun getPhoto(photosList: List<PhotoData>, counter: Int): PhotoData{
