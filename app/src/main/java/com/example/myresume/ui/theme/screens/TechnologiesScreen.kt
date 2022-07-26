@@ -26,11 +26,7 @@ fun Screen.TechnologiesScreen(navController: NavController) {
             // here insert photos of the programming languages
             //sort them by how much I've used them and their use case
 
-            /*ImageCard(
-                painter = painterResource(id = ),
-                contentDescription = description,
-                title = title
-            )*/
+
 
         }
 
