@@ -58,6 +58,30 @@ object ListOfPhotos{
                 text = "Command line work, security scripts",
                 imageResourceId = R.drawable.bash,
                 type = 0
+            ),
+            PhotoData(
+                title = "MySQL",
+                text = "",
+                imageResourceId = R.drawable.mysql,
+                type = 1
+            ),
+            PhotoData(
+                title = "SQLite",
+                text = "",
+                imageResourceId = R.drawable.sqlite,
+                type = 1
+            ),
+            PhotoData(
+                title = "MongoDB",
+                text = "",
+                imageResourceId = R.drawable.mongodb,
+                type = 1
+            ),
+            PhotoData(
+                title = "Firebase",
+                text = "",
+                imageResourceId = R.drawable.firebase,
+                type = 1
             )
 
             //make databases type 1 and tools type 2
