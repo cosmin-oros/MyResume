@@ -61,7 +61,7 @@ fun PhotoListItem(photoData: PhotoData) {
         }
     }else if (photoData.type == 1){
         //check for first
-        if (photoData.title == "MySQL"){
+        if (photoData.title == "MySQL") {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -72,6 +72,27 @@ fun PhotoListItem(photoData: PhotoData) {
             }
         }
 
+            Card(
+                modifier = Modifier
+                    .padding(horizontal = 8.dp, vertical = 8.dp)
+                    .fillMaxWidth(),
+                elevation = 2.dp,
+                backgroundColor = Color.DarkGray,
+                shape = RoundedCornerShape(corner = CornerSize(16.dp))
+            ) {
+                Row {
+                    LanguageImage(photoData = photoData)
+
+                    Column(
+                        modifier = Modifier
+                            .padding(16.dp)
+                            .fillMaxWidth()
+                            .align(Alignment.CenterVertically)
+                    ) {
+                        Text(text = photoData.title, style = typography.h6)
+                    }
+                }
+            }
 
     }else {
         //check for first
@@ -84,6 +105,8 @@ fun PhotoListItem(photoData: PhotoData) {
             ) {
                 Text(text = "Tools", style = typography.h5, fontFamily = FontFamily.Serif)
             }
+
+
         }
     }
 
@@ -91,13 +114,27 @@ fun PhotoListItem(photoData: PhotoData) {
 
 @Composable
 private fun LanguageImage(photoData: PhotoData) {
-    Image(
-        painter = painterResource(id = photoData.imageResourceId),
-        contentDescription = null,
-        contentScale = ContentScale.Crop,
-        modifier = Modifier
-            .padding(8.dp)
-            .size(84.dp)
-            .clip(RoundedCornerShape(corner = CornerSize(16.dp)))
-    )
+    if (photoData.type == 0) {
+        Image(
+            painter = painterResource(id = photoData.imageResourceId),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .padding(8.dp)
+                .size(84.dp)
+                .clip(RoundedCornerShape(corner = CornerSize(16.dp)))
+        )
+    }else if (photoData.type == 1){
+        Image(
+            painter = painterResource(id = photoData.imageResourceId),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .padding(8.dp)
+                .size(height = 84.dp, width = 170.dp)
+                .clip(RoundedCornerShape(corner = CornerSize(16.dp)))
+        )
+    }else{
+
+    }
 }
