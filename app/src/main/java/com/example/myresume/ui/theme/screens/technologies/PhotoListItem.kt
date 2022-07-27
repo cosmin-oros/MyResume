@@ -14,6 +14,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -24,6 +25,18 @@ fun PhotoListItem(photoData: PhotoData) {
     //display the name of the database and the type as text
 
     if (photoData.type == 0) {
+        //check for first
+        if (photoData.title == "Kotlin"){
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Text(text = "Programming Languages", style = typography.h5, fontFamily = FontFamily.Serif)
+            }
+        }
+
         Card(
             modifier = Modifier
                 .padding(horizontal = 8.dp, vertical = 8.dp)
@@ -47,9 +60,31 @@ fun PhotoListItem(photoData: PhotoData) {
             }
         }
     }else if (photoData.type == 1){
+        //check for first
+        if (photoData.title == "MySQL"){
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Text(text = "Databases", style = typography.h5, fontFamily = FontFamily.Serif)
+            }
+        }
+
 
     }else {
-
+        //check for first
+        if (photoData.title == "Linux"){
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Text(text = "Tools", style = typography.h5, fontFamily = FontFamily.Serif)
+            }
+        }
     }
 
 }
