@@ -82,11 +82,43 @@ object ListOfPhotos{
                 text = "",
                 imageResourceId = R.drawable.firebase,
                 type = 1
+            ),
+            PhotoData(
+                title = "Linux",
+                text = "OS",
+                imageResourceId = R.drawable.linux,
+                type = 2
+            ),
+            PhotoData(
+                title = "VSCode",
+                text = "C/C++ projects",
+                imageResourceId = R.drawable.vscode,
+                type = 2
+            ),
+            PhotoData(
+                title = "Android Studio",
+                text = "Android apps",
+                imageResourceId = R.drawable.androidstudio,
+                type = 2
+            ),
+            PhotoData(
+                title = "Intellij",
+                text = "Java / Kotlin projects",
+                imageResourceId = R.drawable.intellij,
+                type = 2
+            ),
+            PhotoData(
+                title = "Pycharm",
+                text = "Python projects",
+                imageResourceId = R.drawable.pycharm,
+                type = 2
+            ),
+            PhotoData(
+                title = "Git",
+                text = "Version control",
+                imageResourceId = R.drawable.git,
+                type = 2
             )
-
-            //make databases type 1 and tools type 2
-
-            //add databases and tools
         )
     }
 }
