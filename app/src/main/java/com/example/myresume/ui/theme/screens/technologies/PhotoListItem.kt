@@ -105,9 +105,43 @@ fun PhotoListItem(photoData: PhotoData) {
             ) {
                 Text(text = "Tools", style = typography.h5, fontFamily = FontFamily.Serif)
             }
-
-
         }
+
+        Card(
+            modifier = Modifier
+                .padding(horizontal = 8.dp, vertical = 8.dp)
+                .fillMaxWidth(),
+            elevation = 2.dp,
+            backgroundColor = Color.DarkGray,
+            shape = RoundedCornerShape(corner = CornerSize(16.dp))
+        ) {
+            Row {
+                LanguageImage(photoData = photoData)
+
+                Column(
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .fillMaxWidth()
+                        .align(Alignment.CenterVertically)
+                ) {
+                    Text(text = photoData.title, style = typography.h6)
+                    Text(text = photoData.text, style = typography.caption)
+                }
+            }
+        }
+
+        //check for last
+        if (photoData.title == "Git"){
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Text(text = "", style = typography.h5, fontFamily = FontFamily.Serif)
+            }
+        }
+
     }
 
 }
