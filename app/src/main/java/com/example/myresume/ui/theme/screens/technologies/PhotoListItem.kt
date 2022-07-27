@@ -114,7 +114,7 @@ fun PhotoListItem(photoData: PhotoData) {
 
 @Composable
 private fun LanguageImage(photoData: PhotoData) {
-    if (photoData.type == 0) {
+    if (photoData.type == 0 || photoData.type == 2) {
         Image(
             painter = painterResource(id = photoData.imageResourceId),
             contentDescription = null,
@@ -134,7 +134,7 @@ private fun LanguageImage(photoData: PhotoData) {
                 .size(height = 84.dp, width = 170.dp)
                 .clip(RoundedCornerShape(corner = CornerSize(16.dp)))
         )
-    }else{
+    }/*else{
 
-    }
+    }*/
 }
