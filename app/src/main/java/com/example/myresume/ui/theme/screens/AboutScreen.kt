@@ -1,9 +1,8 @@
 package com.example.myresume.ui.theme.screens
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.gestures.ScrollableState
+import androidx.compose.foundation.gestures.scrollable
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -26,29 +25,37 @@ fun AboutScreen(navController: NavController) {
     }
     val info1 = info[0]
 
-    Card(
+    Column(
         modifier = Modifier
-            .padding(horizontal = 8.dp, vertical = 8.dp)
-            .fillMaxWidth(),
-        elevation = 2.dp,
-        backgroundColor = Color.DarkGray,
-        shape = RoundedCornerShape(corner = CornerSize(16.dp))
+            .fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Row {
-            LanguageImage(photoData = info1)
+        Card(
+            modifier = Modifier
+                .padding(horizontal = 8.dp, vertical = 8.dp)
+                .fillMaxWidth(),
+            elevation = 2.dp,
+            backgroundColor = Color.DarkGray,
+            shape = RoundedCornerShape(corner = CornerSize(16.dp))
+        ) {
+            Row {
+                LanguageImage(photoData = info1)
 
-            Column(
-                modifier = Modifier
-                    .padding(16.dp)
-                    .fillMaxWidth()
-                    .align(Alignment.CenterVertically)
-            ) {
-                Text(text = info1.title, style = MaterialTheme.typography.h6)
-                Text(text = info1.text, style = MaterialTheme.typography.caption)
+                Column(
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .fillMaxWidth()
+                        .align(Alignment.CenterVertically)
+                ) {
+                    Text(text = info1.title, style = MaterialTheme.typography.h6)
+                    Text(text = info1.text, style = MaterialTheme.typography.caption)
+                }
             }
         }
+
     }
 
-    //below the card insert about, education,
+    //below the card insert about, education, etc
 
 }
