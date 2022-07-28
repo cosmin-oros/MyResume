@@ -147,7 +147,7 @@ fun PhotoListItem(photoData: PhotoData) {
 }
 
 @Composable
-private fun LanguageImage(photoData: PhotoData) {
+fun LanguageImage(photoData: PhotoData) {
     if (photoData.type == 0 || photoData.type == 2) {
         Image(
             painter = painterResource(id = photoData.imageResourceId),
