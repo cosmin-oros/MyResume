@@ -21,10 +21,6 @@ import com.example.myresume.ui.theme.screens.technologies.LanguageImage
 
 @Composable
 fun AboutScreen(navController: NavController) {
-    //insert like in the lazycolumn card the photo on the left
-    // on the right the name and description etc
-    //below contact and more
-
     val info = remember{
         ListOfInfo.getData()
     }
@@ -52,5 +48,7 @@ fun AboutScreen(navController: NavController) {
             }
         }
     }
+
+    //below the card insert about, education,
 
 }

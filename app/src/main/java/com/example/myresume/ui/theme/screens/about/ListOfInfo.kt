@@ -8,7 +8,7 @@ object ListOfInfo {
         return arrayListOf(
             PhotoData(
                 title = "Oros Cosmin-Cristian",
-                text = "insert about",
+                text = "Software Engineer | Android Developer",
                 imageResourceId = R.drawable.photo,
                 type = 0
             )
