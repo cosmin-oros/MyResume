@@ -56,6 +56,8 @@ fun AboutScreen(navController: NavController) {
         
         Spacer(modifier = Modifier.size(16.dp))
 
+        //insert the other in a lazycolumn
+
     }
 
     //below the card insert about, education, etc
