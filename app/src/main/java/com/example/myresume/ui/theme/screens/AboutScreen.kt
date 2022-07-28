@@ -53,6 +53,8 @@ fun AboutScreen(navController: NavController) {
                 }
             }
         }
+        
+        Spacer(modifier = Modifier.size(16.dp))
 
     }
 
