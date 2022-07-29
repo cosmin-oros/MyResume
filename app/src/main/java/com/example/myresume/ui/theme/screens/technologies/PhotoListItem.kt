@@ -59,6 +59,8 @@ fun PhotoListItem(photoData: PhotoData) {
                 }
             }
         }
+
+
     }else if (photoData.type == 1){
         //check for first
         if (photoData.title == "MySQL") {

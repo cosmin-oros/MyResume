@@ -3,6 +3,8 @@ package com.example.myresume.ui.theme.screens
 import androidx.compose.foundation.gestures.ScrollableState
 import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -17,47 +19,23 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.myresume.ui.theme.screens.about.ListOfInfo
 import com.example.myresume.ui.theme.screens.technologies.LanguageImage
+import com.example.myresume.ui.theme.screens.technologies.PhotoListItem
 
 @Composable
 fun AboutScreen(navController: NavController) {
     val info = remember{
         ListOfInfo.getData()
     }
-    val info1 = info[0]
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Card(
-            modifier = Modifier
-                .padding(horizontal = 8.dp, vertical = 8.dp)
-                .fillMaxWidth(),
-            elevation = 2.dp,
-            backgroundColor = Color.DarkGray,
-            shape = RoundedCornerShape(corner = CornerSize(16.dp))
-        ) {
-            Row {
-                LanguageImage(photoData = info1)
-
-                Column(
-                    modifier = Modifier
-                        .padding(16.dp)
-                        .fillMaxWidth()
-                        .align(Alignment.CenterVertically)
-                ) {
-                    Text(text = info1.title, style = MaterialTheme.typography.h6)
-                    Text(text = info1.text, style = MaterialTheme.typography.caption)
-                }
+    LazyColumn(
+        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
+    ){
+        items(
+            items = info,
+            itemContent = {
+                PhotoListItem(photoData = it)
             }
-        }
-        
-        Spacer(modifier = Modifier.size(16.dp))
-
-        //insert the other in a lazycolumn
-
+        )
     }
 
     //below the card insert about, education, etc
