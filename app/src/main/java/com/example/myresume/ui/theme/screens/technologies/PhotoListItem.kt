@@ -25,6 +25,10 @@ fun PhotoListItem(photoData: PhotoData) {
     //display the name of the database and the type as text
 
     if (photoData.type == 0) {
+        if (photoData.title == "Oros Cosmin-Cristian"){
+            Spacer(modifier = Modifier.size(16.dp))
+        }
+        
         //check for first
         if (photoData.title == "Kotlin"){
             Row(
@@ -60,7 +64,10 @@ fun PhotoListItem(photoData: PhotoData) {
             }
         }
 
-
+        if (photoData.title == "Oros Cosmin-Cristian" || photoData.title == "University Politehnica Timisoara" ||
+                photoData.title == "Colegiul Mihai Viteazul Ineu"){
+            Spacer(modifier = Modifier.size(16.dp))
+        }
     }else if (photoData.type == 1){
         //check for first
         if (photoData.title == "MySQL") {
