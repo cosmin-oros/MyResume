@@ -36,8 +36,9 @@ fun AboutScreen(navController: NavController) {
                 PhotoListItem(photoData = it)
             }
         )
+        //insert below an about card
     }
 
-    //below the card insert about, education, etc
+
 
 }

@@ -6,5 +6,5 @@ import com.example.myresume.navigation.Screen
 
 @Composable
 fun ProjectsScreen(navController: NavController) {
-
+    //create image cards that are clickable and expand with more info
 }
