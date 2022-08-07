@@ -61,6 +61,10 @@ fun AboutScreen(navController: NavController) {
                     "https://github.com/cosmin-oros"
         )
 
+        Spacer(modifier = Modifier.size(160.dp))
+        
+        Text(text = "")
+
     }
 
 
