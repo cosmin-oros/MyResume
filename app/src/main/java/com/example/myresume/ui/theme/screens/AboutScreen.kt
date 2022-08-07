@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.myresume.ExpandableCard
 import com.example.myresume.ui.theme.screens.about.ListOfInfo
 import com.example.myresume.ui.theme.screens.technologies.LanguageImage
 import com.example.myresume.ui.theme.screens.technologies.PhotoListItem
@@ -47,7 +48,18 @@ fun AboutScreen(navController: NavController) {
         
         Spacer(modifier = Modifier.size(16.dp))
         
-
+        ExpandableCard(
+            title = "ABOUT",
+            description = "Experienced in C/C++ and Android Development(Kotlin).\n\n" +
+                    "I’m also familiar with a variety of programming languages, including Python, C#, Java, Dart.\n" +
+                    "\n" +
+                    "I consider myself proactive, a hard and smart worker, always willing to learn new things and challenge myself to become better every day.\n" +
+                    "\n\n" +
+                    "Reach me at oroscosmin09@gmail.com / cosmin.oros@student.upt.ro\n" +
+                    "\n" +
+                    "Check out my open source projects:\n" +
+                    "https://github.com/cosmin-oros"
+        )
 
     }
 
