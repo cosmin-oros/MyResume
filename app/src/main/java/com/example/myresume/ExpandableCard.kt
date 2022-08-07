@@ -35,9 +35,9 @@ fun ExpandableCard(
     titleFontSize: TextUnit = MaterialTheme.typography.h6.fontSize,  //default
     titleFontWeight: FontWeight = FontWeight.Bold,
     description: String,
-    descriptionFontSize: TextUnit = MaterialTheme.typography.subtitle1.fontSize,
+    descriptionFontSize: TextUnit = MaterialTheme.typography.subtitle2.fontSize,
     descriptionFontWeight: FontWeight = FontWeight.Normal,
-    descriptionMaxLines: Int = 30,
+    descriptionMaxLines: Int = 20,
     shape: CornerBasedShape = Shapes.medium,
     padding: Dp = 12.dp
 ) {

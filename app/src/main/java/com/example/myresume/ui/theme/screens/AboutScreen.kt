@@ -6,8 +6,10 @@ import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -30,7 +32,8 @@ fun AboutScreen(navController: NavController) {
         ListOfInfo.getData()
     }
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ){
@@ -43,7 +46,6 @@ fun AboutScreen(navController: NavController) {
                     PhotoListItem(photoData = it)
                 }
             )
-            //insert below an about card
         }
         
         Spacer(modifier = Modifier.size(16.dp))
@@ -51,17 +53,11 @@ fun AboutScreen(navController: NavController) {
         ExpandableCard(
             title = "ABOUT",
             description = "Experienced in C/C++ and Android Development(Kotlin).\n\n" +
-                    "I’m also familiar with a variety of programming languages, including Python, C#, Java, Dart.\n" +
-                    "\n" +
                     "I consider myself proactive, a hard and smart worker, always willing to learn new things and challenge myself to become better every day.\n" +
-                    "\n\n" +
-                    "Reach me at oroscosmin09@gmail.com / cosmin.oros@student.upt.ro\n" +
-                    "\n" +
-                    "Check out my open source projects:\n" +
-                    "https://github.com/cosmin-oros"
+                    "\n"
         )
 
-        Spacer(modifier = Modifier.size(160.dp))
+        Spacer(modifier = Modifier.size(64.dp))
         
         Text(text = "")
 
