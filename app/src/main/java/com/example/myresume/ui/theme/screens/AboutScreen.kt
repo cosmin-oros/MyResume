@@ -1,5 +1,6 @@
 package com.example.myresume.ui.theme.screens
 
+import android.graphics.Paint
 import androidx.compose.foundation.gestures.ScrollableState
 import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.*
@@ -13,6 +14,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -26,18 +28,29 @@ fun AboutScreen(navController: NavController) {
     val info = remember{
         ListOfInfo.getData()
     }
-
-    LazyColumn(
-        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ){
-        items(
-            items = info,
-            itemContent = {
-                PhotoListItem(photoData = it)
-            }
-        )
-        //insert below an about card
+        LazyColumn(
+            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
+        ){
+            items(
+                items = info,
+                itemContent = {
+                    PhotoListItem(photoData = it)
+                }
+            )
+            //insert below an about card
+        }
+        
+        Spacer(modifier = Modifier.size(16.dp))
+        
+
+
     }
+
 
 
 
