@@ -101,7 +101,7 @@ fun ProjectsScreen(navController: NavController) {
             /*ImageCard(
                 painter = ,
                 contentDescription = ,
-                title =
+                title = ""
             )*/
         }
 
