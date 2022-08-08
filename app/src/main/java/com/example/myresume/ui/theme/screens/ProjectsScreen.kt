@@ -107,7 +107,7 @@ fun ProjectsScreen(navController: NavController) {
 
         Spacer(modifier = Modifier.size(16.dp))
 
-        /*ClickableText(
+        ClickableText(
             modifier = Modifier
                 .padding(16.dp)
                 .fillMaxWidth(),
@@ -123,6 +123,6 @@ fun ProjectsScreen(navController: NavController) {
                         uriHandler.openUri(stringAnnotation.item)
                     }
             }
-        )*/
+        )
     }
 }
