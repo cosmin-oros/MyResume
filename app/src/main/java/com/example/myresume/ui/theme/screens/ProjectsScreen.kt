@@ -1,5 +1,6 @@
 package com.example.myresume.ui.theme.screens
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -7,11 +8,13 @@ import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.BlendMode.Companion.Color
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
@@ -24,7 +27,10 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.myresume.ImageCard
 import com.example.myresume.navigation.Screen
+import com.example.myresume.ui.theme.screens.about.ImageCardData
+import com.example.myresume.ui.theme.screens.about.ListOfImageCards
 
+@SuppressLint("UnrememberedMutableState")
 @Composable
 fun ProjectsScreen(navController: NavController) {
     //create image cards that are clickable and expand with more info about the project
@@ -58,6 +64,10 @@ fun ProjectsScreen(navController: NavController) {
     // UriHandler parse and opens URI inside AnnotatedString Item in Browse
     val uriHandler = LocalUriHandler.current
 
+    val imageCardsList = ListOfImageCards.getData()
+    var counter = 0
+    var imageCard = mutableStateOf(getImageCard(imageCardsList, counter))
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -70,11 +80,14 @@ fun ProjectsScreen(navController: NavController) {
         Row(
 
         ) {
-            /*ImageCard(
-                painter = ,
-                contentDescription = ,
-                title =
-            )*/
+            //expand on click with more detail
+            ImageCard(
+                painter = painterResource(imageCard.value.imageResId),
+                contentDescription = imageCard.value.description,
+                title = imageCard.value.title
+            )
+            counter++
+            imageCard.value = getImageCard(imageCardsList, counter)
 
             Spacer(modifier = Modifier.width(16.dp))
 
@@ -83,6 +96,8 @@ fun ProjectsScreen(navController: NavController) {
                 contentDescription = ,
                 title =
             )*/
+            counter++
+            imageCard.value = getImageCard(imageCardsList, counter)
         }
 
         Spacer(modifier = Modifier.size(16.dp))
@@ -95,6 +110,8 @@ fun ProjectsScreen(navController: NavController) {
                 contentDescription = ,
                 title =
             )*/
+            counter++
+            imageCard.value = getImageCard(imageCardsList, counter)
 
             Spacer(modifier = Modifier.width(16.dp))
 
@@ -103,6 +120,8 @@ fun ProjectsScreen(navController: NavController) {
                 contentDescription = ,
                 title = ""
             )*/
+            counter++
+            imageCard.value = getImageCard(imageCardsList, counter)
         }
 
         Spacer(modifier = Modifier.size(16.dp))
@@ -125,4 +144,8 @@ fun ProjectsScreen(navController: NavController) {
             }
         )
     }
+}
+
+fun getImageCard(imageCardsList: ArrayList<ImageCardData>, counter: Int): ImageCardData{
+    return imageCardsList[counter]
 }

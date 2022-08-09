@@ -26,7 +26,7 @@ object ListOfImageCards {
                 description = "Fitness App",
                 title = "Fitness App"
             ),*/
-        //
+        
         )
     }
 }
